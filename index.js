@@ -1,5 +1,5 @@
 //importing our generateMarkdown.js, fs, and inquirer
-const generateMarkdown = require('.utils/generateMarkdown');
+const generateMarkdown = require('./generateMarkdown.js');
 const inquirer = require("inquirer");
 const fs = require("fs");
 
@@ -59,7 +59,9 @@ const questions = [
 //this will display questions in terminal
 inquirer
     .prompt(questions)
-  
+    .then(function(response) {
+        console.log(response);
+    })
 
 
 // function to write README file
