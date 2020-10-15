@@ -1,13 +1,13 @@
 //importing our generateMarkdown.js, fs, and inquirer
-const generateMarkdown = require('.utils/generateMarkdown');
+// const generateMarkdown = require('.utils/generateMarkdown');
 const inquirer = require("inquirer");
-const fs = require("fs");
+// const fs = require("fs");
 
 // array of questions for user
 const questions = [
 {
     type: "input",
-    name: "repo link",
+    name: "repoLink",
     message: "What is the link for your project Repo?"
 },
 {
@@ -22,22 +22,22 @@ const questions = [
 },
 {
     type: "input",
-    name: "installation instructions",
+    name: "install",
     message: "What are the installtion instructions?"
 },
 {
     type: "input",
-    name: "usage information",
+    name: "usageInfo",
     message: "What is the usage information?"
 },
 {
     type: "input",
-    name: "contribution guidelines",
+    name: "contribution",
     message: "What are your contribution guidelines?"
 },
 {
     type: "input",
-    name: "test instructions",
+    name: "testing",
     message: "What are the instructions for testing?"
 },
 {
@@ -47,7 +47,7 @@ const questions = [
 },
 {
     type: "input",
-    name: "Github username",
+    name: "username",
     message: "What is your GitHub username?"
 },
 {
@@ -59,11 +59,12 @@ const questions = [
 //this will display questions in terminal
 inquirer
     .prompt(questions)
+  
 
 
 // function to write README file
 function writeToFile(fileName, data) {
-    generateMarkdown(data)
+    // generateMarkdown(data)
 }
 
 // function to initialize program
