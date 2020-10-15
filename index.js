@@ -5,8 +5,60 @@ const fs = require("fs");
 
 // array of questions for user
 const questions = [
-
+{
+    type: "input",
+    name: "repo link",
+    message: "What is the link for your project Repo?"
+},
+{
+    type: "input",
+    name: "title",
+    message: "What is the title of your project?"
+},
+{
+    type: "input",
+    name: "description",
+    message: "What is the description of your project?"
+},
+{
+    type: "input",
+    name: "installation instructions",
+    message: "What are the installtion instructions?"
+},
+{
+    type: "input",
+    name: "usage information",
+    message: "What is the usage information?"
+},
+{
+    type: "input",
+    name: "contribution guidelines",
+    message: "What are your contribution guidelines?"
+},
+{
+    type: "input",
+    name: "test instructions",
+    message: "What are the instructions for testing?"
+},
+{
+    type: "input",
+    name: "license",
+    message: "What is the license?"
+},
+{
+    type: "input",
+    name: "Github username",
+    message: "What is your GitHub username?"
+},
+{
+    type: "input",
+    name: "email",
+    message: "What is your email address?"
+},
 ];
+//this will display questions in terminal
+inquirer
+    .prompt(questions)
 
 
 // function to write README file
