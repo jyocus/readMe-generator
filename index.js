@@ -7,11 +7,6 @@ const fs = require('fs');
 const questions = [
 {
     type: "input",
-    name: "repoLink",
-    message: "What is the link for your project Repo?"
-},
-{
-    type: "input",
     name: "title",
     message: "What is the title of your project?"
 },
@@ -55,29 +50,30 @@ const questions = [
     name: "email",
     message: "What is your email address?"
 },
+{
+    type: "input",
+    name: "repoLink",
+    message: "What is the link for your project Repo?"
+},
 ];
-//this will display questions in terminal
-inquirer
+
+
+// function to initialize program
+function init() {
+    inquirer
     .prompt(questions)
     .then(function (data) {
         // console.log(response);
         // function to write README file
-        fs.writeFile("README.md", JSON.stringify(data, null, '\t'), function (err) {
+        fs.writeFile("README.md", generateMarkdown(data), function (err) {
 
             if (err) {
                 return console.log(err);
             }
 
-            console.log("Success!");
+            // console.log("Success!");
         })
     })
-
-
-// function to initialize program
-function init() {
-    //ask the inquirer stuff
-    //one question asks about filename
-    //writeToFile(saidFileName, dataFromQuestions)
 }
 
 // function call to initialize program
