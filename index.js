@@ -1,7 +1,7 @@
 //importing our generateMarkdown.js, fs, and inquirer
 const generateMarkdown = require('./generateMarkdown.js');
 const inquirer = require("inquirer");
-const fs = require("fs");
+const fs = require('fs');
 
 // array of questions for user
 const questions = [
@@ -59,15 +59,19 @@ const questions = [
 //this will display questions in terminal
 inquirer
     .prompt(questions)
-    .then(function(response) {
-        console.log(response);
+    .then(function (data) {
+        // console.log(response);
+        // function to write README file
+        fs.writeFile("README.md", JSON.stringify(data, null, '\t'), function (err) {
+
+            if (err) {
+                return console.log(err);
+            }
+
+            console.log("Success!");
+        })
     })
 
-
-// function to write README file
-function writeToFile(fileName, data) {
-    // generateMarkdown(data)
-}
 
 // function to initialize program
 function init() {
