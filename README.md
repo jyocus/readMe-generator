@@ -1,8 +1,8 @@
-# aerg
+# ReadMe HW 9
           
-          ## Description:
+          # Description:
 
-          aerg
+          Generator for ReadME through node.js
 
           ## Table of Contents
           [Description](#Description)
@@ -15,29 +15,29 @@
 
           ## Installation Instructions: 
           
-          agr
+          clone my github repository and npm i the package.json
 
           ## Usage Information: 
           
-          adfg
+          unsure
 
           ## Contribution Guidelines: 
           
-          adfg
+          don't mess with my hw!
 
           ## Testing Instructions: 
           
-          adfg
+          read over this to figure out my formatting errors
 
           ## License: 
           
-          dafg
+          drivers ;0
         
           
           ##Questions or Comments
-          adg+"
+          justin.o.yocus@gmail.com+"
 ";
         
           
-          dfg+"
+          github.com/jyocus/readMe-generator+"
 ";
